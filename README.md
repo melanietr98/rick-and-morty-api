@@ -1,5 +1,5 @@
 
-
+[project is currently being worked on will update read me once ready]
 <h2 align="center">Rick & Morty API </h2>  
 <p align="center">
 

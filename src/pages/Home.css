@@ -1,0 +1,15 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-image {
+  width: 500px;
+  margin-top: 50px;
+}
+
+.home-logo {
+  width: 250px;
+  margin-top: 60px;
+}

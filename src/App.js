@@ -1,30 +1,27 @@
-import { useContext } from "react";
-import { PageContext } from "./context/pageContext";
-import Header from "./components/header";
-import Main from "./components/main";
-import Home from "./components/home";
-import Content from "./components/content";
-import Location from "./components/location";
-import Episodes from "./components/episodes"; // import the Episodes component
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Episodes from "./pages/Episodes";
+import Location from "./pages/Location";
+import Header from "./components/Header";
+import NoPage from "./pages/NoPage";
+import RickAndMorty from './RickAndMorty';
 
 function App() {
-  const { currentPage } = useContext(PageContext);
   return (
-    <>
-      <Header />
-      <Main>
-        {currentPage === "Home" ? (
-          <Home />
-        ) : currentPage === "Search" ? (
-          <Content />
-        ) : currentPage === "Location" ? (
-          <Location />
-        ) : currentPage === "Episodes" ? ( 
-          <Episodes />
-        ) : null}
-      </Main>
-    </>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Episodes" element={<Episodes />} />
+          <Route path="/Location" element={<Location />} />
+          <Route path="/RickAndMorty" element={<RickAndMorty />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
 
 export default App;

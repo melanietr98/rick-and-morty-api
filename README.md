@@ -5,7 +5,6 @@
  click the logo to view website
 </p>
 
-<h2 align="center">Rick & Morty API </h2>  
 <p align="center">
 This is my API project I created using the Rick and Morty API. This website is focused around the television show Rick and Morty. I made this website using React</p>
 
